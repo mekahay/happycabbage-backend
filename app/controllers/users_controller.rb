@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
-
+  before_action :authenticate_token, except: [:login, :create]
   # GET /users
   def index
     @users = User.all
@@ -38,6 +38,17 @@ class UsersController < ApplicationController
     @user.destroy
   end
 
+  #LOGIN 
+  def login
+    user = User.find_by(username: params[:user][:username])
+
+    if user && user.authenticate(params[:user][:password])
+      token = create_token(user.id, user.username)
+      render json: { status: 200, token: token, user: user }
+    else
+      render json: { status: 401, message: "Unauthorized"}
+    end
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
@@ -47,5 +58,21 @@ class UsersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(:first_name, :last_name, :email, :type, :current_order, :news_letter, :username, :password_digest)
+    end
+
+    def payload(id, username)
+      {
+        exp: (Time.now + 30.minutes).to_i,
+        iat: Time.now.to_i,
+        iss: ENV['JWT_ISSUER'],
+        user: {
+          id: id,
+          username: username
+        }
+      }
+    end
+
+    def create_token(id, username)
+      JWT.encode(payload(id, username), ENV['JWT_SECRET'], 'HS256')
     end
 end
