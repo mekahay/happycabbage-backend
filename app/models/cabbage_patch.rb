@@ -1,0 +1,2 @@
+class CabbagePatch < ApplicationRecord
+end
