@@ -139,3 +139,301 @@ Filter chain halted as :authenticate_token rendered or redirected
 Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 119)
 
 
+Started GET "/" for ::1 at 2021-01-27 12:46:23 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.5ms | Allocations: 317)
+Completed 200 OK in 33ms (Views: 14.8ms | Allocations: 2446)
+
+
+Started GET "/users" for ::1 at 2021-01-27 12:46:32 -0700
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 120)
+
+
+Started GET "/" for ::1 at 2021-01-27 12:47:12 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.9ms | Allocations: 191)
+Completed 200 OK in 11ms (Views: 9.5ms | Allocations: 750)
+
+
+Started GET "/users" for ::1 at 2021-01-27 12:47:50 -0700
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 0ms (Views: 0.2ms | Allocations: 119)
+
+
+Started GET "/users" for ::1 at 2021-01-27 12:59:15 -0700
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 161)
+
+
+Started GET "/users" for ::1 at 2021-01-27 12:59:39 -0700
+Processing by UsersController#index as */*
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 129)
+
+
+Started GET "/users" for ::1 at 2021-01-27 13:00:57 -0700
+Processing by UsersController#index as */*
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 172)
+
+
+Started GET "/users" for ::1 at 2021-01-27 13:01:15 -0700
+Processing by UsersController#index as */*
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 171)
+
+
+Started GET "/users" for ::1 at 2021-01-27 13:02:00 -0700
+Processing by UsersController#index as */*
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 171)
+
+
+Started GET "/users" for ::1 at 2021-01-27 13:04:15 -0700
+Processing by UsersController#index as */*
+Completed 500 Internal Server Error in 2ms (Allocations: 772)
+
+
+  
+NoMethodError (undefined method `decode_token' for JWT:Module):
+  
+app/controllers/application_controller.rb:19:in `decode_token'
+app/controllers/application_controller.rb:5:in `authenticate_token'
+Started POST "/users/login" for ::1 at 2021-01-27 13:05:08 -0700
+Processing by UsersController#login as */*
+Completed 500 Internal Server Error in 26ms (Allocations: 2022)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/users_controller.rb:43:in `login'
+Started POST "/users/login" for ::1 at 2021-01-27 13:05:57 -0700
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Thomas"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43:in `login'
+Completed 200 OK in 274ms (Views: 0.5ms | ActiveRecord: 10.4ms | Allocations: 8313)
+
+
+Started GET "/users" for ::1 at 2021-01-27 13:06:36 -0700
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 726)
+
+
+  
+NoMethodError (undefined method `decode_token' for JWT:Module):
+  
+app/controllers/application_controller.rb:19:in `decode_token'
+app/controllers/application_controller.rb:5:in `authenticate_token'
+Started GET "/users" for ::1 at 2021-01-27 13:09:59 -0700
+  
+SyntaxError (/Users/Mekenzie/SEIR/finalproject/happycabbage-api/app/controllers/application_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+        render json: { decode: token }
+        ^~~~~~):
+  
+app/controllers/application_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/application_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users" for ::1 at 2021-01-27 13:10:24 -0700
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 354)
+
+
+Started GET "/users" for ::1 at 2021-01-27 13:17:45 -0700
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 20.6ms | Allocations: 9407)
+
+
+Started GET "/users" for ::1 at 2021-01-27 13:19:43 -0700
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 9.4ms | ActiveRecord: 7.7ms | Allocations: 7065)
+
+
+Started GET "/users/1" for ::1 at 2021-01-27 13:29:54 -0700
+Processing by UsersController#show as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55:in `set_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `get_current_user'
+Completed 200 OK in 34ms (Views: 0.4ms | ActiveRecord: 13.0ms | Allocations: 9167)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Gollum"], ["password_digest", "$2a$12$fd.d1iJMC9labPlm7ShVi.f/BIFI/C8giTUGVePjkvqmpX/oNJx.K"], ["created_at", "2021-01-27 20:35:19.928930"], ["updated_at", "2021-01-27 20:35:19.928930"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Gollum"], ["password_digest", "$2a$12$oEVfinZwkTkMarGcE/T7gud/G/1DW8T23aWIrmESb.49K8.PWOJuG"], ["created_at", "2021-01-27 20:36:11.231932"], ["updated_at", "2021-01-27 20:36:11.231932"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/2" for ::1 at 2021-01-27 13:36:39 -0700
+Processing by UsersController#show as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 8.5ms | Allocations: 8538)
+
+
+Started GET "/users/1" for ::1 at 2021-01-27 13:36:51 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 579)
+
+
+Started POST "/users/login" for ::1 at 2021-01-27 13:38:19 -0700
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{"username"=>"Gollum", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Gollum"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `login'
+Completed 200 OK in 235ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 956)
+
+
+Started GET "/users/2" for ::1 at 2021-01-27 13:38:53 -0700
+Processing by UsersController#show as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `get_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `get_current_user'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 1868)
+
+
+Started GET "/users/1" for ::1 at 2021-01-27 13:39:16 -0700
+Processing by UsersController#show as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `get_current_user'
+Filter chain halted as :authorize_user rendered or redirected
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1277)
+
+
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5539770192405480150)[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCategoriesToProduct (20210128223331)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.6ms)[0m  [1m[35mALTER TABLE "products" ADD "category" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210128223331"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5539770192405480150)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (8.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "picture1", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Oh Baby."], ["description", "The Oh Baby basket includes all of our seasonal favorites for the perfect gender neutral gift. With heirloom elements like the knit booties and hypoallergenic bear, it’s the perfect cozy basket. This gift includes, 1 Alpaca Bear - ethically made & naturally hypoallergenic (color will vary) 1 Set of Knit Booties with lambs wool lining, size 0-6 months, 1 Board Book - selection of Chicago ABC’s, The Snowy Day or Little Penguins, 1 Pom Pom Basket"], ["picture1", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1611873964/HAPPY_CABBAGE_NEW_BABY_GIFT_ipfwaz.jpg"], ["created_at", "2021-01-28 22:59:58.288974"], ["updated_at", "2021-01-28 22:59:58.288974"], ["category", "new baby, children"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "picture1", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mother Lover."], ["description", "As two new mothers we felt really strongly about having a gift tailored for a new Mama. We love the products made by MOTHER MOTHER out of LA, for this gift we feature three of them along with one of our personal favorite books and a relaxing lavender eye pillow. This gift is perfect for an expecting or new mama. This gift includes, 1 MOTHER MOTHER Bath Soak, 1 Sustainably Sourced Sea Sponge, 1 bottle of MOTHER MOTHER All Over Oil, 1 MOTHER MOTHER Calm Aromatherapy Inhaler, 1 Lavender Eye Pillow, 1 copy of Brave New Mama by Vicki Rivard, 1 Handmade Moroccan Market Tote"], ["picture1", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1611874208/HAPPY_CABBAGE_MOTHER_LOVER_GIFT_zfviia.jpg"], ["created_at", "2021-01-28 22:59:58.313280"], ["updated_at", "2021-01-28 22:59:58.313280"], ["category", "new baby, wellness"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "picture1", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Oh Baby."], ["description", "The Oh Baby basket includes all of our seasonal favorites for the perfect gender neutral gift. With heirloom elements like the knit booties and hypoallergenic bear, it’s the perfect cozy basket. This gift includes, 1 Alpaca Bear - ethically made & naturally hypoallergenic (color will vary) 1 Set of Knit Booties with lambs wool lining, size 0-6 months, 1 Board Book - selection of Chicago ABC’s, The Snowy Day or Little Penguins, 1 Pom Pom Basket"], ["picture1", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1611873964/HAPPY_CABBAGE_NEW_BABY_GIFT_ipfwaz.jpg"], ["created_at", "2021-01-28 23:01:10.200448"], ["updated_at", "2021-01-28 23:01:10.200448"], ["category", "new baby, children"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "picture1", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mother Lover."], ["description", "As two new mothers we felt really strongly about having a gift tailored for a new Mama. We love the products made by MOTHER MOTHER out of LA, for this gift we feature three of them along with one of our personal favorite books and a relaxing lavender eye pillow. This gift is perfect for an expecting or new mama. This gift includes, 1 MOTHER MOTHER Bath Soak, 1 Sustainably Sourced Sea Sponge, 1 bottle of MOTHER MOTHER All Over Oil, 1 MOTHER MOTHER Calm Aromatherapy Inhaler, 1 Lavender Eye Pillow, 1 copy of Brave New Mama by Vicki Rivard, 1 Handmade Moroccan Market Tote"], ["picture1", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1611874208/HAPPY_CABBAGE_MOTHER_LOVER_GIFT_zfviia.jpg"], ["created_at", "2021-01-28 23:01:10.205339"], ["updated_at", "2021-01-28 23:01:10.205339"], ["category", "new baby, wellness"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Mekenzie"], ["last_name", "Hayford"], ["email", "mekenzie.hayford@gmail.com"], ["username", "mekahay"], ["password_digest", "$2a$12$4SKMNHvx9xI46609EM0Am.uUHvONhVITbPexebNm7kkM7BayFnNp6"], ["created_at", "2021-01-28 23:01:10.464007"], ["updated_at", "2021-01-28 23:01:10.464007"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2021-01-28 16:01:33 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.3ms | Allocations: 8)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/users" for ::1 at 2021-01-28 16:01:38 -0700
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/products" for ::1 at 2021-01-28 16:01:48 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 47ms (Views: 25.3ms | ActiveRecord: 9.1ms | Allocations: 10879)
+
+
+Started GET "/products" for ::1 at 2021-01-28 16:02:12 -0700
+Processing by ProductsController#index as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.4ms | Allocations: 1271)
+
+
+Started DELETE "/products/3" for ::1 at 2021-01-28 16:02:24 -0700
+Processing by ProductsController#destroy as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"3"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:44:in `set_product'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mProduct Destroy (2.0ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+Completed 204 No Content in 22ms (ActiveRecord: 3.3ms | Allocations: 1984)
+
+
+Started GET "/products" for ::1 at 2021-01-28 16:02:33 -0700
+Processing by ProductsController#index as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1107)
+
+
+Started DELETE "/products/4" for ::1 at 2021-01-28 16:02:45 -0700
+Processing by ProductsController#destroy as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:44:in `set_product'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+Completed 204 No Content in 7ms (ActiveRecord: 1.1ms | Allocations: 1795)
+
+
+Started DELETE "/products" for ::1 at 2021-01-28 16:02:50 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products" for ::1 at 2021-01-28 16:02:58 -0700
+Processing by ProductsController#index as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 948)
+
+
