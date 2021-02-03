@@ -3675,3 +3675,923 @@ Processing by ProductsController#index as */*
 Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.5ms | Allocations: 974)
 
 
+Started GET "/products" for ::1 at 2021-02-02 20:31:11 -0700
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 52ms (Views: 18.7ms | ActiveRecord: 14.0ms | Allocations: 13357)
+
+
+Started GET "/products" for ::1 at 2021-02-02 20:34:18 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.9ms | Allocations: 990)
+
+
+Started GET "/products" for ::1 at 2021-02-02 20:34:19 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 994)
+
+
+Started GET "/products" for ::1 at 2021-02-02 20:36:52 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 974)
+
+
+Started GET "/" for ::1 at 2021-02-02 20:51:01 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 105)
+
+
+Started GET "/products" for ::1 at 2021-02-02 21:12:36 -0700
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 53ms (Views: 21.2ms | ActiveRecord: 7.4ms | Allocations: 13361)
+
+
+Started GET "/products" for ::1 at 2021-02-02 21:12:53 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 993)
+
+
+Started GET "/products/undefined" for ::1 at 2021-02-02 21:14:39 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 404 Not Found in 15ms (ActiveRecord: 0.6ms | Allocations: 2180)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=undefined):
+  
+app/controllers/products_controller.rb:50:in `set_product'
+Started GET "/products/2" for ::1 at 2021-02-02 21:15:28 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 699)
+
+
+Started GET "/products/1" for ::1 at 2021-02-02 21:15:52 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 726)
+
+
+Started POST "/corporates" for ::1 at 2021-02-02 21:19:07 -0700
+Processing by CorporatesController#create as */*
+  Parameters: {"first_name"=>"Mekenzie", "last_name"=>"Hayford", "email"=>"mekenzie.hayford@gmail.com", "subject"=>"help", "message"=>"love to do some work with you!", "corporate"=>{"first_name"=>"Mekenzie", "last_name"=>"Hayford", "email"=>"mekenzie.hayford@gmail.com", "subject"=>"help", "message"=>"love to do some work with you!"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/corporates_controller.rb:20:in `create'
+  [1m[36mCorporate Create (3.3ms)[0m  [1m[32mINSERT INTO "corporates" ("first_name", "last_name", "email", "subject", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Mekenzie"], ["last_name", "Hayford"], ["email", "mekenzie.hayford@gmail.com"], ["subject", "help"], ["message", "love to do some work with you!"], ["created_at", "2021-02-03 04:19:07.769306"], ["updated_at", "2021-02-03 04:19:07.769306"]]
+  ↳ app/controllers/corporates_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/corporates_controller.rb:20:in `create'
+Completed 201 Created in 17ms (Views: 0.6ms | ActiveRecord: 9.7ms | Allocations: 5912)
+
+
+Started GET "/corporates" for ::1 at 2021-02-02 21:20:51 -0700
+Processing by CorporatesController#index as */*
+  [1m[36mCorporate Load (0.9ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates"[0m
+  ↳ app/controllers/corporates_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 1160)
+
+
+Started GET "/corporates" for ::1 at 2021-02-02 21:28:54 -0700
+Processing by CorporatesController#index as */*
+  [1m[36mCorporate Load (1.0ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates"[0m
+  ↳ app/controllers/corporates_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 11.0ms | Allocations: 3247)
+
+
+Started GET "/corporates" for ::1 at 2021-02-02 21:29:25 -0700
+Processing by CorporatesController#index as */*
+  [1m[36mCorporate Load (0.3ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates"[0m
+  ↳ app/controllers/corporates_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1148)
+
+
+Started GET "/corporates" for ::1 at 2021-02-02 21:33:44 -0700
+Processing by CorporatesController#index as */*
+  [1m[36mCorporate Load (0.3ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates"[0m
+  ↳ app/controllers/corporates_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 1146)
+
+
+Started GET "/corporates" for ::1 at 2021-02-02 21:34:05 -0700
+Processing by CorporatesController#index as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+  [1m[36mCorporate Load (0.3ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates"[0m
+  ↳ app/controllers/corporates_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 1146)
+
+
+Started DELETE "/corporates/1" for ::1 at 2021-02-02 21:34:14 -0700
+Processing by CorporatesController#destroy as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"1"}
+  [1m[36mCorporate Load (0.4ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates" WHERE "corporates"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/corporates_controller.rb:44:in `set_corporate'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/corporates_controller.rb:38:in `destroy'
+  [1m[36mCorporate Destroy (0.4ms)[0m  [1m[31mDELETE FROM "corporates" WHERE "corporates"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/corporates_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/corporates_controller.rb:38:in `destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 1.7ms | Allocations: 1931)
+
+
+Started DELETE "/corporates" for ::1 at 2021-02-02 21:34:18 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/corporates"):
+  
+Started GET "/corporates" for ::1 at 2021-02-02 21:34:21 -0700
+Processing by CorporatesController#index as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+  [1m[36mCorporate Load (0.3ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates"[0m
+  ↳ app/controllers/corporates_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1022)
+
+
+Started DELETE "/corporates/2" for ::1 at 2021-02-02 21:34:38 -0700
+Processing by CorporatesController#destroy as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"2"}
+  [1m[36mCorporate Load (0.3ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates" WHERE "corporates"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/corporates_controller.rb:44:in `set_corporate'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/corporates_controller.rb:38:in `destroy'
+  [1m[36mCorporate Destroy (0.3ms)[0m  [1m[31mDELETE FROM "corporates" WHERE "corporates"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/corporates_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/corporates_controller.rb:38:in `destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 1.2ms | Allocations: 1786)
+
+
+Started DELETE "/corporates/3" for ::1 at 2021-02-02 21:34:48 -0700
+Processing by CorporatesController#destroy as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"3"}
+  [1m[36mCorporate Load (0.6ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates" WHERE "corporates"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/corporates_controller.rb:44:in `set_corporate'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/corporates_controller.rb:38:in `destroy'
+  [1m[36mCorporate Destroy (2.1ms)[0m  [1m[31mDELETE FROM "corporates" WHERE "corporates"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/corporates_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/corporates_controller.rb:38:in `destroy'
+Completed 204 No Content in 12ms (ActiveRecord: 3.2ms | Allocations: 1785)
+
+
+Started GET "/corporates" for ::1 at 2021-02-02 21:34:51 -0700
+Processing by CorporatesController#index as */*
+  [1m[36mCorporate Load (0.3ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates"[0m
+  ↳ app/controllers/corporates_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 762)
+
+
+Started DELETE "/corporates/4" for ::1 at 2021-02-02 21:35:01 -0700
+Processing by CorporatesController#destroy as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"4"}
+  [1m[36mCorporate Load (0.4ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates" WHERE "corporates"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/corporates_controller.rb:44:in `set_corporate'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/corporates_controller.rb:38:in `destroy'
+  [1m[36mCorporate Destroy (0.4ms)[0m  [1m[31mDELETE FROM "corporates" WHERE "corporates"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/corporates_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/corporates_controller.rb:38:in `destroy'
+Completed 204 No Content in 5ms (ActiveRecord: 1.2ms | Allocations: 1785)
+
+
+Started GET "/corporates" for ::1 at 2021-02-02 21:35:05 -0700
+Processing by CorporatesController#index as */*
+  [1m[36mCorporate Load (0.5ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates"[0m
+  ↳ app/controllers/corporates_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 621)
+
+
+Started GET "/customs" for ::1 at 2021-02-02 21:35:16 -0700
+Processing by CustomsController#index as */*
+  [1m[36mCustom Load (1.3ms)[0m  [1m[34mSELECT "customs".* FROM "customs"[0m
+  ↳ app/controllers/customs_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 12.3ms | ActiveRecord: 16.3ms | Allocations: 6839)
+
+
+Started GET "/customs" for ::1 at 2021-02-02 21:35:46 -0700
+Processing by CustomsController#index as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+  [1m[36mCustom Load (0.4ms)[0m  [1m[34mSELECT "customs".* FROM "customs"[0m
+  ↳ app/controllers/customs_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 1308)
+
+
+Started DELETE "/customs/1" for ::1 at 2021-02-02 21:36:16 -0700
+Processing by CustomsController#destroy as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"1"}
+  [1m[36mCustom Load (0.3ms)[0m  [1m[34mSELECT "customs".* FROM "customs" WHERE "customs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customs_controller.rb:44:in `set_custom'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customs_controller.rb:38:in `destroy'
+  [1m[36mCustom Destroy (1.1ms)[0m  [1m[31mDELETE FROM "customs" WHERE "customs"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/customs_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customs_controller.rb:38:in `destroy'
+Completed 204 No Content in 27ms (ActiveRecord: 2.0ms | Allocations: 1893)
+
+
+Started DELETE "/customs/2" for ::1 at 2021-02-02 21:36:19 -0700
+Processing by CustomsController#destroy as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"2"}
+  [1m[36mCustom Load (0.3ms)[0m  [1m[34mSELECT "customs".* FROM "customs" WHERE "customs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customs_controller.rb:44:in `set_custom'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customs_controller.rb:38:in `destroy'
+  [1m[36mCustom Destroy (0.3ms)[0m  [1m[31mDELETE FROM "customs" WHERE "customs"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/customs_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customs_controller.rb:38:in `destroy'
+Completed 204 No Content in 5ms (ActiveRecord: 1.2ms | Allocations: 1795)
+
+
+Started DELETE "/customs/3" for ::1 at 2021-02-02 21:36:22 -0700
+Processing by CustomsController#destroy as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"3"}
+  [1m[36mCustom Load (0.7ms)[0m  [1m[34mSELECT "customs".* FROM "customs" WHERE "customs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customs_controller.rb:44:in `set_custom'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customs_controller.rb:38:in `destroy'
+  [1m[36mCustom Destroy (0.4ms)[0m  [1m[31mDELETE FROM "customs" WHERE "customs"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/customs_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customs_controller.rb:38:in `destroy'
+Completed 204 No Content in 9ms (ActiveRecord: 1.9ms | Allocations: 1796)
+
+
+Started DELETE "/customs/4" for ::1 at 2021-02-02 21:36:25 -0700
+Processing by CustomsController#destroy as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"4"}
+  [1m[36mCustom Load (0.5ms)[0m  [1m[34mSELECT "customs".* FROM "customs" WHERE "customs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/customs_controller.rb:44:in `set_custom'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customs_controller.rb:38:in `destroy'
+  [1m[36mCustom Destroy (1.7ms)[0m  [1m[31mDELETE FROM "customs" WHERE "customs"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/customs_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customs_controller.rb:38:in `destroy'
+Completed 204 No Content in 35ms (ActiveRecord: 2.8ms | Allocations: 1798)
+
+
+Started GET "/customs" for ::1 at 2021-02-02 21:36:28 -0700
+Processing by CustomsController#index as */*
+  [1m[36mCustom Load (0.3ms)[0m  [1m[34mSELECT "customs".* FROM "customs"[0m
+  ↳ app/controllers/customs_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 627)
+
+
+Started GET "/customs" for ::1 at 2021-02-02 21:36:36 -0700
+Processing by CustomsController#index as */*
+  [1m[36mCustom Load (0.3ms)[0m  [1m[34mSELECT "customs".* FROM "customs"[0m
+  ↳ app/controllers/customs_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 627)
+
+
+Started GET "/corporates" for ::1 at 2021-02-02 21:36:41 -0700
+Processing by CorporatesController#index as */*
+  [1m[36mCorporate Load (0.4ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates"[0m
+  ↳ app/controllers/corporates_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 621)
+
+
+Started GET "/get_in_touches" for ::1 at 2021-02-02 21:36:48 -0700
+Processing by GetInTouchesController#index as */*
+  [1m[36mGetInTouch Load (0.8ms)[0m  [1m[34mSELECT "get_in_touches".* FROM "get_in_touches"[0m
+  ↳ app/controllers/get_in_touches_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 9.3ms | ActiveRecord: 8.2ms | Allocations: 5179)
+
+
+Started GET "/getintouches" for ::1 at 2021-02-02 21:37:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/getintouches"):
+  
+Started GET "/get_in_touches" for ::1 at 2021-02-02 21:37:16 -0700
+Processing by GetInTouchesController#index as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+  [1m[36mGetInTouch Load (0.3ms)[0m  [1m[34mSELECT "get_in_touches".* FROM "get_in_touches"[0m
+  ↳ app/controllers/get_in_touches_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started DELETE "/get_in_touches/1" for ::1 at 2021-02-02 21:37:30 -0700
+Processing by GetInTouchesController#destroy as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"1"}
+  [1m[36mGetInTouch Load (0.9ms)[0m  [1m[34mSELECT "get_in_touches".* FROM "get_in_touches" WHERE "get_in_touches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/get_in_touches_controller.rb:44:in `set_get_in_touch'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/get_in_touches_controller.rb:38:in `destroy'
+  [1m[36mGetInTouch Destroy (4.8ms)[0m  [1m[31mDELETE FROM "get_in_touches" WHERE "get_in_touches"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/get_in_touches_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/get_in_touches_controller.rb:38:in `destroy'
+Completed 204 No Content in 36ms (ActiveRecord: 6.3ms | Allocations: 1882)
+
+
+Started GET "/get_in_touches" for ::1 at 2021-02-02 21:37:35 -0700
+Processing by GetInTouchesController#index as */*
+  [1m[36mGetInTouch Load (0.5ms)[0m  [1m[34mSELECT "get_in_touches".* FROM "get_in_touches"[0m
+  ↳ app/controllers/get_in_touches_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 761)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:21:37 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 57ms (Views: 50.4ms | ActiveRecord: 12.7ms | Allocations: 3098)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:21:49 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 974)
+
+
+Started GET "/products/2" for ::1 at 2021-02-02 22:21:56 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 25ms (Views: 4.4ms | ActiveRecord: 3.3ms | Allocations: 706)
+
+
+Started DELETE "/products/2" for ::1 at 2021-02-02 22:21:59 -0700
+Processing by ProductsController#destroy as */*
+  Parameters: {"id"=>"2", "product"=>{}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mProduct Destroy (1.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+Completed 204 No Content in 24ms (ActiveRecord: 3.2ms | Allocations: 1797)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:21:59 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.0ms | Allocations: 816)
+
+
+Started GET "/products/1" for ::1 at 2021-02-02 22:22:01 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.2ms | Allocations: 708)
+
+
+Started DELETE "/products/1" for ::1 at 2021-02-02 22:22:03 -0700
+Processing by ProductsController#destroy as */*
+  Parameters: {"id"=>"1", "product"=>{}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mProduct Destroy (0.8ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+Completed 204 No Content in 8ms (ActiveRecord: 1.5ms | Allocations: 1803)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:22:03 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 629)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:22:09 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.8ms | Allocations: 629)
+
+
+Started POST "/products" for ::1 at 2021-02-02 22:23:03 -0700
+Processing by ProductsController#create as */*
+  Parameters: {"name"=>"LOVE & OTHER DRUGS X LOCAL ECLECTIC & TAXAFLORA", "price"=>"175", "description"=>"\"“Love is the most powerful & still the most unknown energy of the world”\n\n-Pierre Teilhard de Chardin \n\nLove & Other drugs has a little bit of everything for your forever Valentine - solid gold earrings by Local Eclectic, dried florals by Taxaflora, the warmth of a new candle and something sweet to enjoy xo \n\nThis gift includes : \n\n-1 pair of Solid Gold Heart Earrings from Family Gold by Local Eclectic. Featuring a perfectly shaped adorable solid gold heart, these cuties are just the right size for multiple holes. 9K solid gold.\n\n-1 Maison Louis Marie Antidris Cassis Candle - this fragrance begins with a black pepper note enhanced by Bergamot and cassis. It then develops a strong green accord with a White Rose base and dries down to a warm Oakmoss, Tonka, and clean Musk base.\n\n- 1 Skeem Helix Match Cloche, the perfect tabletop accessory \n\n- 1 Dried bouquet by Taxaflora that will last for years to come \n\n-Compartes brand new Raspberry Rose dark chocolate bar - made from our signature 73% premium gourmet dark chocolate and raspberries, and infused with rose. This beautiful chocolate bar is the perfect balance of floral, sweet, tart, and tangy flavors. \"", "picture1"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_LOVE_OTHERDRUGS_suwkbd.jpg", "picture2"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_VALENTINES_COMPARTES_ROE_xiazok.jpg", "picture3"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_FAMILY_GOLD_HEART_EARRINGS_l3chqu.jpg", "picture4"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_FAMILY_GOLD_HEART_EARRINGS_l3chqu.jpg", "product"=>{"name"=>"LOVE & OTHER DRUGS X LOCAL ECLECTIC & TAXAFLORA", "price"=>"175", "description"=>"\"“Love is the most powerful & still the most unknown energy of the world”\n\n-Pierre Teilhard de Chardin \n\nLove & Other drugs has a little bit of everything for your forever Valentine - solid gold earrings by Local Eclectic, dried florals by Taxaflora, the warmth of a new candle and something sweet to enjoy xo \n\nThis gift includes : \n\n-1 pair of Solid Gold Heart Earrings from Family Gold by Local Eclectic. Featuring a perfectly shaped adorable solid gold heart, these cuties are just the right size for multiple holes. 9K solid gold.\n\n-1 Maison Louis Marie Antidris Cassis Candle - this fragrance begins with a black pepper note enhanced by Bergamot and cassis. It then develops a strong green accord with a White Rose base and dries down to a warm Oakmoss, Tonka, and clean Musk base.\n\n- 1 Skeem Helix Match Cloche, the perfect tabletop accessory \n\n- 1 Dried bouquet by Taxaflora that will last for years to come \n\n-Compartes brand new Raspberry Rose dark chocolate bar - made from our signature 73% premium gourmet dark chocolate and raspberries, and infused with rose. This beautiful chocolate bar is the perfect balance of floral, sweet, tart, and tangy flavors. \"", "picture1"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_LOVE_OTHERDRUGS_suwkbd.jpg", "picture2"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_VALENTINES_COMPARTES_ROE_xiazok.jpg", "picture3"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_FAMILY_GOLD_HEART_EARRINGS_l3chqu.jpg", "picture4"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_FAMILY_GOLD_HEART_EARRINGS_l3chqu.jpg"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (3.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "picture1", "picture2", "picture3", "picture4", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "LOVE & OTHER DRUGS X LOCAL ECLECTIC & TAXAFLORA"], ["price", "175.0"], ["description", "\"“Love is the most powerful & still the most unknown energy of the world”\n\n-Pierre Teilhard de Chardin \n\nLove & Other drugs has a little bit of everything for your forever Valentine - solid gold earrings by Local Eclectic, dried florals by Taxaflora, the warmth of a new candle and something sweet to enjoy xo \n\nThis gift includes : \n\n-1 pair of Solid Gold Heart Earrings from Family Gold by Local Eclectic. Featuring a perfectly shaped adorable solid gold heart, these cuties are just the right size for multiple holes. 9K solid gold.\n\n-1 Maison Louis Marie Antidris Cassis Candle - this fragrance begins with a black pepper note enhanced by Bergamot and cassis. It then develops a strong green accord with a White Rose base and dries down to a warm Oakmoss, Tonka, and clean Musk base.\n\n- 1 Skeem Helix Match Cloche, the perfect tabletop accessory \n\n- 1 Dried bouquet by Taxaflora that will last for years to come \n\n-Compartes brand new Raspberry Rose dark chocolate bar - made from our signature 73% premium gourmet dark chocolate and raspberries, and infused with rose. This beautiful chocolate bar is the perfect balance of floral, sweet, tart, and tangy flavors. \""], ["picture1", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_LOVE_OTHERDRUGS_suwkbd.jpg"], ["picture2", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_VALENTINES_COMPARTES_ROE_xiazok.jpg"], ["picture3", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_FAMILY_GOLD_HEART_EARRINGS_l3chqu.jpg"], ["picture4", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_FAMILY_GOLD_HEART_EARRINGS_l3chqu.jpg"], ["created_at", "2021-02-03 05:23:03.860870"], ["updated_at", "2021-02-03 05:23:03.860870"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+Completed 201 Created in 48ms (Views: 9.0ms | ActiveRecord: 4.1ms | Allocations: 2336)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:23:03 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 833)
+
+
+Started GET "/products/9" for ::1 at 2021-02-02 22:23:08 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 725)
+
+
+Started PUT "/products/9" for ::1 at 2021-02-02 22:24:16 -0700
+Processing by ProductsController#update as */*
+  Parameters: {"name"=>"LOVE & OTHER DRUGS X LOCAL ECLECTIC & TAXAFLORA", "price"=>"175", "description"=>"\"“Love is the most powerful & still the most unknown energy of the world”\n\n-Pierre Teilhard de Chardin \n\nLove & Other drugs has a little bit of everything for your forever Valentine - solid gold earrings by Local Eclectic, dried florals by Taxaflora, the warmth of a new candle and something sweet to enjoy xo \n\nThis gift includes : \n\n-1 pair of Solid Gold Heart Earrings from Family Gold by Local Eclectic. Featuring a perfectly shaped adorable solid gold heart, these cuties are just the right size for multiple holes. 9K solid gold.\n\n-1 Maison Louis Marie Antidris Cassis Candle - this fragrance begins with a black pepper note enhanced by Bergamot and cassis. It then develops a strong green accord with a White Rose base and dries down to a warm Oakmoss, Tonka, and clean Musk base.\n\n- 1 Skeem Helix Match Cloche, the perfect tabletop accessory \n\n- 1 Dried bouquet by Taxaflora that will last for years to come \n\n-Compartes brand new Raspberry Rose dark chocolate bar - made from our signature 73% premium gourmet dark chocolate and raspberries, and infused with rose. This beautiful chocolate bar is the perfect balance of floral, sweet, tart, and tangy flavors. \"", "picture1"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_LOVE_OTHERDRUGS_suwkbd.jpg", "picture2"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_VALENTINES_COMPARTES_ROE_xiazok.jpg", "picture3"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_FAMILY_GOLD_HEART_EARRINGS_l3chqu.jpg", "picture4"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_MAISON_LOUIS_MARIE_CASSIS_wnegn0.jpg", "id"=>"9", "product"=>{"name"=>"LOVE & OTHER DRUGS X LOCAL ECLECTIC & TAXAFLORA", "price"=>"175", "description"=>"\"“Love is the most powerful & still the most unknown energy of the world”\n\n-Pierre Teilhard de Chardin \n\nLove & Other drugs has a little bit of everything for your forever Valentine - solid gold earrings by Local Eclectic, dried florals by Taxaflora, the warmth of a new candle and something sweet to enjoy xo \n\nThis gift includes : \n\n-1 pair of Solid Gold Heart Earrings from Family Gold by Local Eclectic. Featuring a perfectly shaped adorable solid gold heart, these cuties are just the right size for multiple holes. 9K solid gold.\n\n-1 Maison Louis Marie Antidris Cassis Candle - this fragrance begins with a black pepper note enhanced by Bergamot and cassis. It then develops a strong green accord with a White Rose base and dries down to a warm Oakmoss, Tonka, and clean Musk base.\n\n- 1 Skeem Helix Match Cloche, the perfect tabletop accessory \n\n- 1 Dried bouquet by Taxaflora that will last for years to come \n\n-Compartes brand new Raspberry Rose dark chocolate bar - made from our signature 73% premium gourmet dark chocolate and raspberries, and infused with rose. This beautiful chocolate bar is the perfect balance of floral, sweet, tart, and tangy flavors. \"", "picture1"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_LOVE_OTHERDRUGS_suwkbd.jpg", "picture2"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_VALENTINES_COMPARTES_ROE_xiazok.jpg", "picture3"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_FAMILY_GOLD_HEART_EARRINGS_l3chqu.jpg", "picture4"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_MAISON_LOUIS_MARIE_CASSIS_wnegn0.jpg"}}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:29:in `update'
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "picture4" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["picture4", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328096/HAPPY_CABBAGE_MAISON_LOUIS_MARIE_CASSIS_wnegn0.jpg"], ["updated_at", "2021-02-03 05:24:16.889924"], ["id", 9]]
+  ↳ app/controllers/products_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:29:in `update'
+Completed 200 OK in 15ms (Views: 0.9ms | ActiveRecord: 1.7ms | Allocations: 2629)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:24:17 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.8ms | Allocations: 833)
+
+
+Started GET "/products/9" for ::1 at 2021-02-02 22:24:20 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 725)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:24:29 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.8ms | Allocations: 833)
+
+
+Started GET "/products/9" for ::1 at 2021-02-02 22:24:32 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 725)
+
+
+Started GET "/products/9" for ::1 at 2021-02-02 22:27:35 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 725)
+
+
+Started GET "/products/9" for ::1 at 2021-02-02 22:27:39 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 725)
+
+
+Started GET "/products/9" for ::1 at 2021-02-02 22:28:23 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.8ms | Allocations: 725)
+
+
+Started GET "/products/9" for ::1 at 2021-02-02 22:28:35 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/products/9" for ::1 at 2021-02-02 22:29:15 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/products/9" for ::1 at 2021-02-02 22:29:31 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:29:57 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 833)
+
+
+Started GET "/products/9" for ::1 at 2021-02-02 22:30:02 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 725)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 22:38:51 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (4.0ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 85ms (Views: 72.0ms | ActiveRecord: 22.5ms | Allocations: 11156)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 22:39:02 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.3ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 885)
+
+
+Started POST "/products" for ::1 at 2021-02-02 22:40:19 -0700
+Processing by ProductsController#create as */*
+  Parameters: {"name"=>"TICKLED PINK DATE NIGHT IN", "price"=>"135", "description"=>"\"“Love is the whole thing. We are only pieces.”\n\n-Rumi\n\nOur Tickled Pink gift is the perfect accompaniment for a date night-in.  Spend some time challenging your mind, learning more about one another and indulging a little bit. \n\nThis gift includes : \n\n-500 Piece Tickled Pink Pieceworks Puzzle, feast your eyes: what do you get when you take sugar and spice and everything nice, and add a dash of snips and snails and puppy dog tails? A ludicrously dew- covered, rose-colored provocative still-life. Tickled pink, indeed!\n\n-Maude Burn Massage Candle is made with skin-softening jojoba oil. This hand-poured massage candle is blended with warming notes of amber, cedar leaf, lemongrass, tonka bean and medjool date. It can be poured on the skin once melted or simply used to infuse scent in the room.\n\n-Actually Curious Happy Hour Cards includes questions that explore dreams, ambitions, and cherished memories with friends, family, and loved ones.\n\n-Compartes Salted Caramel Bar the unforgettable combination of Compartés Sea Salt Caramel blended into our signature dark chocolate a rich, sweet and salty sensation unlike another caramel bar in the world. \n\n-Violet Hour Romeo & Juliet Pre-Batched Cocktail with two Bombay Gins \"", "picture1"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328220/HAPPY_CABBAGE_TICKLED_PINK_gcoq87.jpg", "picture2"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328304/HAPPY_CABBAGE_ACTUALLY_CURIOUS_id0wle.jpg", "picture3"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328220/HAPPY_CABBAGE_VALENTINES_MAUDE_2_tqdyvz.jpg", "picture4"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328220/HAPPY_CABBAGE_PIECEWORKS_TICKLEDPINK2_poh2d8.png", "product"=>{"name"=>"TICKLED PINK DATE NIGHT IN", "price"=>"135", "description"=>"\"“Love is the whole thing. We are only pieces.”\n\n-Rumi\n\nOur Tickled Pink gift is the perfect accompaniment for a date night-in.  Spend some time challenging your mind, learning more about one another and indulging a little bit. \n\nThis gift includes : \n\n-500 Piece Tickled Pink Pieceworks Puzzle, feast your eyes: what do you get when you take sugar and spice and everything nice, and add a dash of snips and snails and puppy dog tails? A ludicrously dew- covered, rose-colored provocative still-life. Tickled pink, indeed!\n\n-Maude Burn Massage Candle is made with skin-softening jojoba oil. This hand-poured massage candle is blended with warming notes of amber, cedar leaf, lemongrass, tonka bean and medjool date. It can be poured on the skin once melted or simply used to infuse scent in the room.\n\n-Actually Curious Happy Hour Cards includes questions that explore dreams, ambitions, and cherished memories with friends, family, and loved ones.\n\n-Compartes Salted Caramel Bar the unforgettable combination of Compartés Sea Salt Caramel blended into our signature dark chocolate a rich, sweet and salty sensation unlike another caramel bar in the world. \n\n-Violet Hour Romeo & Juliet Pre-Batched Cocktail with two Bombay Gins \"", "picture1"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328220/HAPPY_CABBAGE_TICKLED_PINK_gcoq87.jpg", "picture2"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328304/HAPPY_CABBAGE_ACTUALLY_CURIOUS_id0wle.jpg", "picture3"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328220/HAPPY_CABBAGE_VALENTINES_MAUDE_2_tqdyvz.jpg", "picture4"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328220/HAPPY_CABBAGE_PIECEWORKS_TICKLEDPINK2_poh2d8.png"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (3.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "picture1", "picture2", "picture3", "picture4", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "TICKLED PINK DATE NIGHT IN"], ["price", "135.0"], ["description", "\"“Love is the whole thing. We are only pieces.”\n\n-Rumi\n\nOur Tickled Pink gift is the perfect accompaniment for a date night-in.  Spend some time challenging your mind, learning more about one another and indulging a little bit. \n\nThis gift includes : \n\n-500 Piece Tickled Pink Pieceworks Puzzle, feast your eyes: what do you get when you take sugar and spice and everything nice, and add a dash of snips and snails and puppy dog tails? A ludicrously dew- covered, rose-colored provocative still-life. Tickled pink, indeed!\n\n-Maude Burn Massage Candle is made with skin-softening jojoba oil. This hand-poured massage candle is blended with warming notes of amber, cedar leaf, lemongrass, tonka bean and medjool date. It can be poured on the skin once melted or simply used to infuse scent in the room.\n\n-Actually Curious Happy Hour Cards includes questions that explore dreams, ambitions, and cherished memories with friends, family, and loved ones.\n\n-Compartes Salted Caramel Bar the unforgettable combination of Compartés Sea Salt Caramel blended into our signature dark chocolate a rich, sweet and salty sensation unlike another caramel bar in the world. \n\n-Violet Hour Romeo & Juliet Pre-Batched Cocktail with two Bombay Gins \""], ["picture1", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328220/HAPPY_CABBAGE_TICKLED_PINK_gcoq87.jpg"], ["picture2", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328304/HAPPY_CABBAGE_ACTUALLY_CURIOUS_id0wle.jpg"], ["picture3", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328220/HAPPY_CABBAGE_VALENTINES_MAUDE_2_tqdyvz.jpg"], ["picture4", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328220/HAPPY_CABBAGE_PIECEWORKS_TICKLEDPINK2_poh2d8.png"], ["created_at", "2021-02-03 05:40:19.117895"], ["updated_at", "2021-02-03 05:40:19.117895"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+Completed 201 Created in 10ms (Views: 0.5ms | ActiveRecord: 4.1ms | Allocations: 2120)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:40:19 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 1050)
+
+
+Started GET "/products/10" for ::1 at 2021-02-02 22:40:30 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 746)
+
+
+Started POST "/products" for ::1 at 2021-02-02 22:41:23 -0700
+Processing by ProductsController#create as */*
+  Parameters: {"name"=>"GAL PAL - ROSE ", "price"=>"65", "description"=>"\"\"\"There is nothing I would not do for those who are really my friends.\"\"\n\n-Jane Austen\n\nGosh, we miss our girls so much. If you are too, this little gift is a lovely gesture to make sure they know it. Plan a Zoom, throw on your face masks and catch up over a little champs. \n\nThis gift includes : \n\n-HUGS Chamomile & CBD Sheet Mask \n\n-Terrycloth Headband perfect for your new pandemic 12 step skin care routine or #maskmondays\n\n-Tatine Love That Burns Candle - Bridgerton vibes anyone? \n\n-Mini Moet Rose \n\n-Seattle Chocolate Champagne Truffles \"", "picture1"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328516/IMG_0035_n8zuds.jpg", "picture2"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328516/mc_ri_4_1000x_vp8mmu.jpg", "picture3"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328516/HAPPY_CABBAGE_TATINELOVETHATBURNS_dqnefy.jpg", "picture4"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328516/HAPPY_CABBAGE_SEATTLE_CHOCOLATE_CHAMPAGNETRUFFLE_i9mwrr.png", "product"=>{"name"=>"GAL PAL - ROSE ", "price"=>"65", "description"=>"\"\"\"There is nothing I would not do for those who are really my friends.\"\"\n\n-Jane Austen\n\nGosh, we miss our girls so much. If you are too, this little gift is a lovely gesture to make sure they know it. Plan a Zoom, throw on your face masks and catch up over a little champs. \n\nThis gift includes : \n\n-HUGS Chamomile & CBD Sheet Mask \n\n-Terrycloth Headband perfect for your new pandemic 12 step skin care routine or #maskmondays\n\n-Tatine Love That Burns Candle - Bridgerton vibes anyone? \n\n-Mini Moet Rose \n\n-Seattle Chocolate Champagne Truffles \"", "picture1"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328516/IMG_0035_n8zuds.jpg", "picture2"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328516/mc_ri_4_1000x_vp8mmu.jpg", "picture3"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328516/HAPPY_CABBAGE_TATINELOVETHATBURNS_dqnefy.jpg", "picture4"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328516/HAPPY_CABBAGE_SEATTLE_CHOCOLATE_CHAMPAGNETRUFFLE_i9mwrr.png"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "picture1", "picture2", "picture3", "picture4", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "GAL PAL - ROSE "], ["price", "65.0"], ["description", "\"\"\"There is nothing I would not do for those who are really my friends.\"\"\n\n-Jane Austen\n\nGosh, we miss our girls so much. If you are too, this little gift is a lovely gesture to make sure they know it. Plan a Zoom, throw on your face masks and catch up over a little champs. \n\nThis gift includes : \n\n-HUGS Chamomile & CBD Sheet Mask \n\n-Terrycloth Headband perfect for your new pandemic 12 step skin care routine or #maskmondays\n\n-Tatine Love That Burns Candle - Bridgerton vibes anyone? \n\n-Mini Moet Rose \n\n-Seattle Chocolate Champagne Truffles \""], ["picture1", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328516/IMG_0035_n8zuds.jpg"], ["picture2", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328516/mc_ri_4_1000x_vp8mmu.jpg"], ["picture3", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328516/HAPPY_CABBAGE_TATINELOVETHATBURNS_dqnefy.jpg"], ["picture4", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328516/HAPPY_CABBAGE_SEATTLE_CHOCOLATE_CHAMPAGNETRUFFLE_i9mwrr.png"], ["created_at", "2021-02-03 05:41:23.763492"], ["updated_at", "2021-02-03 05:41:23.763492"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+Completed 201 Created in 7ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 2119)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:41:23 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.3ms | Allocations: 1225)
+
+
+Started POST "/products" for ::1 at 2021-02-02 22:43:05 -0700
+Processing by ProductsController#create as */*
+  Parameters: {"name"=>"JASMIN SEA POLISH ZEN", "price"=>"166", "description"=>"“From plants that wake when others sleep, from timid jasmine buds that keep their odor to themselves all day, but when the sunlight dies away let the delicious secret out to every breeze that roams about.”\n\n-Thomas Moore\n\nOur Jasmin Sea Polish Chillll, Chill, Chill, Chill basket is the perfect gift for someone who isn’t as keen on baths, but still needs time to relax and unwind.  \n\nThis gift includes : \n\n-Handwoven Moroccan Market Basket\n\n-French Girl Organics Jasmin Sea Polish\n\n-French Girl Organics Lumiere Jasmin Body Oil   \n\n-French Girl Organics Rose Lip Polish \n\n-French Girl Organics Le Lip Tint in Claire, sheer, moisturizing without color \n\n-Sustainably Sourced Sea Sponge\n\n-Lavender Eye Mask ", "picture1"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328645/IMG_3217_JasminSeaPolish_y4bzcr.jpg", "picture2"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328645/Jasmin_Sea_Polish_ykgexn.png", "picture3"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328645/Rose_Lip_Scrub_ezegfx.png", "picture4"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328645/Jasmin_Body_Glow_nrmjrc.png", "product"=>{"name"=>"JASMIN SEA POLISH ZEN", "price"=>"166", "description"=>"“From plants that wake when others sleep, from timid jasmine buds that keep their odor to themselves all day, but when the sunlight dies away let the delicious secret out to every breeze that roams about.”\n\n-Thomas Moore\n\nOur Jasmin Sea Polish Chillll, Chill, Chill, Chill basket is the perfect gift for someone who isn’t as keen on baths, but still needs time to relax and unwind.  \n\nThis gift includes : \n\n-Handwoven Moroccan Market Basket\n\n-French Girl Organics Jasmin Sea Polish\n\n-French Girl Organics Lumiere Jasmin Body Oil   \n\n-French Girl Organics Rose Lip Polish \n\n-French Girl Organics Le Lip Tint in Claire, sheer, moisturizing without color \n\n-Sustainably Sourced Sea Sponge\n\n-Lavender Eye Mask ", "picture1"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328645/IMG_3217_JasminSeaPolish_y4bzcr.jpg", "picture2"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328645/Jasmin_Sea_Polish_ykgexn.png", "picture3"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328645/Rose_Lip_Scrub_ezegfx.png", "picture4"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328645/Jasmin_Body_Glow_nrmjrc.png"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (1.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "picture1", "picture2", "picture3", "picture4", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "JASMIN SEA POLISH ZEN"], ["price", "166.0"], ["description", "“From plants that wake when others sleep, from timid jasmine buds that keep their odor to themselves all day, but when the sunlight dies away let the delicious secret out to every breeze that roams about.”\n\n-Thomas Moore\n\nOur Jasmin Sea Polish Chillll, Chill, Chill, Chill basket is the perfect gift for someone who isn’t as keen on baths, but still needs time to relax and unwind.  \n\nThis gift includes : \n\n-Handwoven Moroccan Market Basket\n\n-French Girl Organics Jasmin Sea Polish\n\n-French Girl Organics Lumiere Jasmin Body Oil   \n\n-French Girl Organics Rose Lip Polish \n\n-French Girl Organics Le Lip Tint in Claire, sheer, moisturizing without color \n\n-Sustainably Sourced Sea Sponge\n\n-Lavender Eye Mask "], ["picture1", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328645/IMG_3217_JasminSeaPolish_y4bzcr.jpg"], ["picture2", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328645/Jasmin_Sea_Polish_ykgexn.png"], ["picture3", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328645/Rose_Lip_Scrub_ezegfx.png"], ["picture4", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612328645/Jasmin_Body_Glow_nrmjrc.png"], ["created_at", "2021-02-03 05:43:05.957579"], ["updated_at", "2021-02-03 05:43:05.957579"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+Completed 201 Created in 7ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 2114)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:43:06 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.2ms | Allocations: 1416)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:44:06 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.5ms | Allocations: 1416)
+
+
+Started GET "/products" for ::1 at 2021-02-02 22:44:17 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 1.1ms | Allocations: 1416)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 22:45:31 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.8ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.8ms | Allocations: 885)
+
+
+Started GET "/the_cabbage_patches" for ::1 at 2021-02-02 22:45:58 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/the_cabbage_patches"):
+  
+Started GET "/" for ::1 at 2021-02-02 22:46:06 -0700
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 105)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 22:46:19 -0700
+Processing by CabbagePatchesController#index as HTML
+  [1m[36mCabbagePatch Load (0.8ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.8ms | Allocations: 880)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 22:46:36 -0700
+Processing by CabbagePatchesController#index as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}}
+  [1m[36mCabbagePatch Load (0.3ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 885)
+
+
+Started DELETE "/cabbage_patches/1" for ::1 at 2021-02-02 22:46:44 -0700
+Processing by CabbagePatchesController#destroy as */*
+  Parameters: {"user"=>{"username"=>"Thomas", "password"=>"[FILTERED]"}, "id"=>"1"}
+  [1m[36mCabbagePatch Load (0.4ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches" WHERE "cabbage_patches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cabbage_patches_controller.rb:44:in `set_cabbage_patch'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:38:in `destroy'
+  [1m[36mCabbagePatch Destroy (1.6ms)[0m  [1m[31mDELETE FROM "cabbage_patches" WHERE "cabbage_patches"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/cabbage_patches_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:38:in `destroy'
+Completed 204 No Content in 15ms (ActiveRecord: 2.4ms | Allocations: 1912)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 22:46:47 -0700
+Processing by CabbagePatchesController#index as HTML
+  [1m[36mCabbagePatch Load (0.2ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 634)
+
+
+Started POST "/cabbage_patches" for ::1 at 2021-02-02 22:53:16 -0700
+Processing by CabbagePatchesController#create as */*
+  Parameters: {"date"=>"2020-05-20", "subject"=>"SAVE LIVES, BUT MAKE IT FASHION", "summery"=>"Face masks are an accessory that we didn’t imagine having to wear every day, but given that it’s our new reality we may as well have a little bit of fun with it. Read More -->", "message"=>"Face masks are an accessory that we didn’t imagine having to wear every day, but given that it’s our new reality we may as well have a little bit of fun with it.  Happy Cabbage currently has beautiful hand tie-dyed masks available in our “Sheets to Streets” package, but we wanted to share a few more of our favorite face masks. ", "picture1"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612329553/slide_12_aa2ggm.jpg", "picture2"=>"", "picture3"=>"", "picture4"=>"", "picture5"=>"", "picture6"=>"", "picture7"=>"", "picture8"=>"", "cabbage_patch"=>{"date"=>"2020-05-20", "subject"=>"SAVE LIVES, BUT MAKE IT FASHION", "summery"=>"Face masks are an accessory that we didn’t imagine having to wear every day, but given that it’s our new reality we may as well have a little bit of fun with it. Read More -->", "message"=>"Face masks are an accessory that we didn’t imagine having to wear every day, but given that it’s our new reality we may as well have a little bit of fun with it.  Happy Cabbage currently has beautiful hand tie-dyed masks available in our “Sheets to Streets” package, but we wanted to share a few more of our favorite face masks. ", "picture1"=>"https://res.cloudinary.com/dq5gq02uo/image/upload/v1612329553/slide_12_aa2ggm.jpg", "picture2"=>"", "picture3"=>"", "picture4"=>"", "picture5"=>"", "picture6"=>"", "picture7"=>"", "picture8"=>""}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:20:in `create'
+  [1m[36mCabbagePatch Create (1.8ms)[0m  [1m[32mINSERT INTO "cabbage_patches" ("date", "subject", "summery", "message", "picture1", "picture2", "picture3", "picture4", "picture5", "picture6", "picture7", "picture8", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["date", "2020-05-20"], ["subject", "SAVE LIVES, BUT MAKE IT FASHION"], ["summery", "Face masks are an accessory that we didn’t imagine having to wear every day, but given that it’s our new reality we may as well have a little bit of fun with it. Read More -->"], ["message", "Face masks are an accessory that we didn’t imagine having to wear every day, but given that it’s our new reality we may as well have a little bit of fun with it.  Happy Cabbage currently has beautiful hand tie-dyed masks available in our “Sheets to Streets” package, but we wanted to share a few more of our favorite face masks. "], ["picture1", "https://res.cloudinary.com/dq5gq02uo/image/upload/v1612329553/slide_12_aa2ggm.jpg"], ["picture2", ""], ["picture3", ""], ["picture4", ""], ["picture5", ""], ["picture6", ""], ["picture7", ""], ["picture8", ""], ["created_at", "2021-02-03 05:53:16.219380"], ["updated_at", "2021-02-03 05:53:16.219380"]]
+  ↳ app/controllers/cabbage_patches_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:20:in `create'
+Completed 201 Created in 30ms (Views: 0.6ms | ActiveRecord: 11.8ms | Allocations: 4335)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 22:53:16 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.6ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 945)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 22:55:05 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.4ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 886)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 22:55:54 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.3ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 886)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 22:56:00 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.4ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 886)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 22:56:02 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (1.5ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.5ms | Allocations: 886)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 22:56:13 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.7ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 886)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 22:58:06 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (1.0ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.0ms | Allocations: 886)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 23:06:20 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.8ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 32ms (Views: 31.8ms | ActiveRecord: 13.3ms | Allocations: 2948)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 23:06:25 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.9ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.9ms | Allocations: 886)
+
+
+Started GET "/products" for ::1 at 2021-02-02 23:07:09 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.3ms | Allocations: 1436)
+
+
+Started GET "/products/9" for ::1 at 2021-02-02 23:07:13 -0700
+Processing by ProductsController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:50:in `set_product'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 752)
+
+
+Started GET "/products" for ::1 at 2021-02-02 23:07:21 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 1416)
+
+
+Started GET "/products" for ::1 at 2021-02-02 23:07:52 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1416)
+
+
+Started GET "/products" for ::1 at 2021-02-02 23:08:04 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 1416)
+
+
+Started GET "/products" for ::1 at 2021-02-02 23:08:51 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1416)
+
+
+Started GET "/products" for ::1 at 2021-02-02 23:09:03 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1416)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 23:09:15 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.3ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 886)
+
+
+Started GET "/products" for ::1 at 2021-02-02 23:09:32 -0700
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1416)
+
+
+Started GET "/corporates" for ::1 at 2021-02-02 23:09:38 -0700
+Processing by CorporatesController#index as */*
+  [1m[36mCorporate Load (1.1ms)[0m  [1m[34mSELECT "corporates".* FROM "corporates"[0m
+  ↳ app/controllers/corporates_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 1.1ms | Allocations: 621)
+
+
+Started GET "/get_in_touches" for ::1 at 2021-02-02 23:09:42 -0700
+Processing by GetInTouchesController#index as */*
+  [1m[36mGetInTouch Load (2.1ms)[0m  [1m[34mSELECT "get_in_touches".* FROM "get_in_touches"[0m
+  ↳ app/controllers/get_in_touches_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 2.1ms | Allocations: 761)
+
+
+Started GET "/get_in_touches" for ::1 at 2021-02-02 23:09:45 -0700
+Processing by GetInTouchesController#index as */*
+  [1m[36mGetInTouch Load (1.0ms)[0m  [1m[34mSELECT "get_in_touches".* FROM "get_in_touches"[0m
+  ↳ app/controllers/get_in_touches_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 1.0ms | Allocations: 761)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 23:09:54 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.4ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 886)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 23:11:31 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.3ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 886)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 23:12:45 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.6ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 886)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 23:13:06 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.4ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 886)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 23:13:48 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (1.4ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.4ms | Allocations: 886)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 23:14:01 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (1.4ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.4ms | Allocations: 886)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 23:25:03 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (2.2ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 69ms (Views: 62.9ms | ActiveRecord: 19.9ms | Allocations: 2948)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 23:25:18 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (0.4ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 886)
+
+
+Started GET "/cabbage_patches" for ::1 at 2021-02-02 23:25:37 -0700
+Processing by CabbagePatchesController#index as */*
+  [1m[36mCabbagePatch Load (1.7ms)[0m  [1m[34mSELECT "cabbage_patches".* FROM "cabbage_patches"[0m
+  ↳ app/controllers/cabbage_patches_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.7ms | Allocations: 886)
+
+
