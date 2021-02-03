@@ -38,6 +38,12 @@ class ProductsController < ApplicationController
     @product.destroy
   end
 
+  #SEARCH
+  #/products/search?p=new_baby
+  # def search
+  #   products = Product.where(category: params[:p])
+  #   render json: products
+  # end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product

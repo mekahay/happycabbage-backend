@@ -11,6 +11,12 @@ Rails.application.routes.draw do
       post '/login', to: 'users#login'
     end
   end
+  # resources :products do
+  #   get "search", on: collection
+  # end
+  # resources :users do
+  #   get "searchUser", on :collection
+  # end
   resources :cabbage_patches
   resources :customs
   resources :corporates
